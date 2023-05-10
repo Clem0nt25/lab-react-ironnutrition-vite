@@ -21,7 +21,7 @@ function App() {
 
       <Row style={{ width: "100%", justifyContent: "center" }}>
         {foodItems.map((food) => (
-          <FoodBox key={food.name} food={food} />
+          <FoodBox key={food.name} food={food} foodItems={foodItems} setFoodItems={setFoodItems} />
         ))}
       </Row>
     </div>

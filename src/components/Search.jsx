@@ -6,14 +6,19 @@ function Search({ foodItems, setFoodItems }) {
     const [searchTerm, setSearchTerm] = useState("")
 
     const handleChange = (e) => {
+
+        const foodsCopy = [...foodItems]   
         const searchQuery = e.target.value
         setSearchTerm(searchQuery)
+        console.log(searchTerm)
 
-        const filteredFood = foodItems.filter((foodItem) => {
-            return foodItem.name.includes(searchTerm)
+        const filteredFood = foodsCopy.filter(() => {
+            return foodItems.name.includes(searchTerm)
         })
-        setFoodItems(filteredFood)
-      };
+
+        console.log(filteredFood)
+
+      }; 
 
   return (
     <div>
